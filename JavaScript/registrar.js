@@ -28,15 +28,16 @@ let slots = []
 /*------------------------------------------------------------------------------------ */
 //--FUNCIONES DE GUARDADO :) Reutilizables--//
 
+function GuardarVehiculoEnLocal() {
+    localStorage.setItem("vehiculos", JSON.stringify(listaVehiculos));
+    guardarSlotsEnLocalStorage();
+};
 
 function guardarSlotsEnLocalStorage() {
     localStorage.setItem('slots', JSON.stringify(slots));
 };
 
-function GuardarEnLocal() {
-    localStorage.setItem("vehiculos", JSON.stringify(listaVehiculos));
-    GuardarEnLocal();
-};
+
 
 /*------------------------------------------------------------------------------------ */
 
@@ -49,3 +50,59 @@ function cargarlLocalStorage() {
     }
     slots = obtenerSlotsDesdeLocalStorage();
 }
+
+function obtenerSlotsDesdeLocalStorage() {
+    const slotsData = localStorage.getItem('slots');
+    if (slotsData) {
+        return JSON.parse(slotsData);
+    } else {
+        const initialSlots = Array.from({length: 50}, (_, i) => ({
+            name: `A${i + 1}`,
+            available: true
+        }));
+        localStorage.setItem('slots', JSON.stringify(initialSlots));
+        return initialSlots;
+    }
+}
+
+/*---------------------------------------------------------------------------------*/
+
+const boton = document.querySelector('#Boton')
+boton.addEventListener('click', Mostar)
+function Mostar(){
+    console.log('hola hola')
+}
+
+
+
+/*
+const preciona = document.getElementById('RegistrarBoton')
+preciona.addEventListener('click', mostrarValor)
+
+function mostrarValor() {
+    // Obtener el elemento
+    const algo = document.querySelector('.algo')
+    const rr = document.createElement('h1')
+    algo.innerHTML = ''
+    var valor = input.value;
+    rr.innerHTML = `hola` 
+    algo.appendChild(rr)
+}
+
+        const preciona = document.getElementById('preciona')
+        preciona.addEventListener('click', mostrarValor)
+
+
+        function mostrarValor() {
+            // Obtener el elemento
+            const algo = document.querySelector('.algo')
+            var input = document.getElementById("miInput");
+            const rr = document.createElement('h1')
+            // Obtener el valor del input
+            algo.innerHTML = ''
+            var valor = input.value;
+            rr.innerHTML = `${valor}` 
+            algo.appendChild(rr)
+            
+
+*/
