@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../Css/registrar.css">
+</head>
+<body>
+    <video autoplay loop class="fondo">
+        <source src="../multimedia/videos/bmw-m2-under-the-rain.3840x2160.mp4" type="video/mp4">
+    </video>
+
+    <aside class="container">
+        <section class="seccionInputs">
+            <div class="entradaInputs">
+                <div class="inputsPage">
+                    <label for="plateInputEntrance">Plate:</label>
+                    <input type="text" id="plateInputEntrance">
+                </div>
+                <div class="inputsPage">
+                    <label for="modelInputEntrance">Model:</label>
+                    <input type="text" id="modelInputEntrance">
+                </div>                  
+                <div class="inputsPage">
+                    <label for="hourInputEntrance">Enter Hour:</label>
+                    <input type="text" id="hourInputEntrance">
+                </div>                   
+                <div class="inputsPage">
+                    <label for="slotInputEntrance">Slots <span style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">(A1-A50):</span></label>
+                    <input type="text" id="slotInputEntrance">
+                </div>
+                <div class="inputsPage">
+                    <label for="vehicleType">Type:</label>
+                    <div class="dropdown">
+                        <button class="dropdown-button" id="dropdownButton">Select Type</button>
+                        <div class="dropdown-content" id="dropdownContent">
+                            <a href="#" data-value="carro">Carro</a>
+                            <a href="#" data-value="moto">Moto</a>
+                            <a href="#" data-value="camion">Camión</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="entranceUtils">
+                <button id="registerEntranceBtn">Enter</button>
+                <h1 id="horaActual">12:00</h1>
+            </div>
+        </section>
+    </section>
+    </aside>
+
+
+</body>
+</html>
