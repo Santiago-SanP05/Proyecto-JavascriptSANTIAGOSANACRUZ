@@ -196,3 +196,6 @@ tr:nth-child(even) {
 tr:hover {
     background-color: #dddddd65;
 }
+#Bigcontenedor{
+    border:2px solid red;
+}

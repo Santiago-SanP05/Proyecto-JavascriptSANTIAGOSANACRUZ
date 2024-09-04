@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     CargarLocalStorage();
 });
 
+
 let listaVehiculos = [];
 let slots = [];
 
