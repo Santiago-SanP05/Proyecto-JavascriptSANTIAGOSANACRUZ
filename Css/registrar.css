@@ -1,12 +1,10 @@
+@import url('https://fonts.cdnfonts.com/css/cheerful-cupcake');
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-#active{
-    margin-bottom: 2px solid green;
-    color:rgb(255, 0, 0);
-}
+
 body{
     padding: 0;
     margin: 0;
@@ -47,9 +45,15 @@ body{
     align-items: center;
     color:white;
 }
-.entradaInputs .Botonrtn a{
+
+.Botonrtn a{
     text-decoration: none;
+    padding:0.7vh 19vh;
     color:rgb(75, 150, 247);
+    transition: .7s;
+}
+.Botonrtn a:hover{
+    color:#000;
 
 }
 .entradaInputs .Botonrtn{
@@ -58,6 +62,13 @@ body{
     background: transparent;
     border-radius: 20px;
     text-decoration: none;
+    transition: .6s;
+    font-family: 'Cheerful Cupcake', sans-serif;
+
+}
+.entradaInputs .Botonrtn:hover{
+    background: rgba(245, 0, 82, 0.842);
+    border:2px solid rgb(87, 0, 36);
 }
 .inputsPage {
     display: flex;
@@ -66,9 +77,10 @@ body{
     align-items: center;
 }
 .inputsPage label{
-    color:rgb(1, 162, 255);
-    text-shadow: 0 0 10px rgb(0, 138, 115),
-    0 0 4px rgb(129, 252, 231),
+    color:rgb(65, 185, 255);
+    font-family: 'Cheerful Cupcake', sans-serif;
+    text-shadow: 0 0 10px rgb(0, 97, 81),
+    0 0 4px rgb(3, 128, 107),
     0 0 5px rgb(0, 241, 201);
 }
 .inputsPage input{
@@ -91,18 +103,28 @@ body{
     display: none;
     flex-direction: column;
     align-items: center;
-    background: gray;
+    background:transparent;
     transition: .6s;
     
 }
 .dropdown-content a {
-    border:2px solid rgb(199, 196, 196);
+    border:1px solid rgb(255, 255, 255);
+    background:rgb(90, 17, 94);
+    border-radius: 10px;
     color: white;
     padding: 10px;
     text-decoration: none;
     display: block;
     font-size: 15px;
     width: 100%;
+    transition: .7s;
+}
+.dropdown-content a:hover{
+    border:2px solid rgb(205, 174, 255);
+    background:rgb(58, 24, 63);
+    color: rgb(222, 139, 243);
+
+    
 }
 .entranceUtils{
     width: 90%;
@@ -122,6 +144,14 @@ body{
     height: 3vh;
     border-radius:10px;
     margin-right: 13vh;
-    background: rgba(139, 14, 255, 0.329);
-    color: rgb(102, 0, 116);
+    background: rgba(139, 14, 255, 0.884);
+    color: rgb(206, 133, 216);
+    font-family: 'Cheerful Cupcake', sans-serif;
+    border:2px solid transparent;
+    transition: .3s;
+}
+#Boton:hover{
+    background: rgba(139, 14, 255, 0.541);
+    color: rgb(245, 0, 114);
+    border:none;
 }

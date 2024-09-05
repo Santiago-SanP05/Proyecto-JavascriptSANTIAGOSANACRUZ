@@ -19,8 +19,8 @@ function MostrarHistorial(){
         <td>${valoresDelLocal.model}</td>
         <td>${valoresDelLocal.entraceHour}</td>
         <td>${valoresDelLocal.slot}</td>
-        <td>
-            <button onclick="salida('${valoresDelLocal.plate}', '${valoresDelLocal.slot}')">exit</button>
+        <td class="divbtn">
+            <button class="Pagarbtn"onclick="salida('${valoresDelLocal.plate}', '${valoresDelLocal.slot}')">Pagar</button>
         </td>
     `;
         contenedor.appendChild(th);
@@ -44,7 +44,7 @@ function GuardarVehiculoEnLocal() {
 function CargarDatosHistorial(){
     const History = localStorage.getItem('historial');
     if (History) {
-        Historial = JSON.parse(history);
+        Historial = JSON.parse(History);
     } else {
         Historial = [];
     }
@@ -82,12 +82,13 @@ function parseTimeString(timeString) {
 }
 
 function salida(placa, lots) {
+    CargarDatosHistorial()
     const vehiculo = listaVehiculos.find(v => v.plate === placa);
     const lote = slots.find(v => v.name === lots);
     if (vehiculo){
         const index = listaVehiculos.indexOf(vehiculo);
         let eliminado = listaVehiculos.splice(index, 1);
-        console.log(listaVehiculos);
+
         const ahora = new Date();
 
         const horas = ahora.getHours();
@@ -120,7 +121,9 @@ function salida(placa, lots) {
         let costoFinal = Valorminutos * presio;
         eliminado[0].totalM = Valorminutos
         eliminado[0].total_cost = costoFinal;
-        Historial.push(eliminado[0])
+        console.log(eliminado)
+        Historial.push(eliminado[0]);
+        eliminado.splice(0,1)
         guardarHistorialLocal();
         GuardarVehiculoEnLocal()
     };
@@ -147,7 +150,7 @@ function MuestraHistorial(){
     ContenedorPadre.innerHTML = '';
     HijoContenedorPadre.innerHTML=`
     <table class="ContainHistory">
-    <thead>
+    <thead class"Navarriba">
         <th>Placa</th>
         <th>Tipo de vehiculo</th>
         <th>Modelo</th>
@@ -177,7 +180,7 @@ function HistorialMostar(ListaDelHistori){
     const ContenedorDelHistory = document.getElementById('ContenedorDelHistory');
     ListaDelHistori.forEach(Valores => {
         const th = document.createElement('tr')
-        th.innerHTML = `
+        th.innerHTML += `
         <td>${Valores.plate}</td>
         <td>${Valores.type}</td>
         <td>${Valores.model}</td>
