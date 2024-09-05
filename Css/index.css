@@ -44,12 +44,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 0 8px rgb(60, 60, 255),
-    0 0 12px rgb(0, 0, 255),
-    0 0 15px rgb(0, 0, 172),
-    0 0 18px rgb(0, 0, 66);
     border-radius: 0px 0px 50px 50px;
-    border-bottom: 2px solid rgb(192, 192, 248);
+    border-bottom: 5px solid rgb(164, 164, 247);
     position: fixed;
     z-index: 1;
     backdrop-filter: blur(9px);
@@ -64,7 +60,7 @@ body{
     align-items: center;
     flex-direction: row;
     margin: 0;
-    padding: 0;
+    padding: 0% 0 3.5vh 0;
     border-bottom:2px solid white;
 }
 .nombre-logo #nombre{
@@ -74,17 +70,22 @@ body{
     width: 40%;
     color:white;
     text-size-adjust: 2rem;
+    font-family: 'Black Side', sans-serif;
+    
 }
 .logo{
     width: 60px;
     height: 60px;
-    border: 2px solid white;
+    background: rgb(0, 0, 70);
+    border: 2px solid rgb(0, 14, 164);
     border-radius: 50px;
 }
 .navbarPrincipal{
     width: 90%;
     height: 40%;
     display: flex;
+    font-family: 'Black Side', sans-serif;
+    font-size: 1.5rem;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
@@ -107,18 +108,18 @@ body{
     height: 0;
     border-left: 0 solid transparent;
     border-right: 50vh solid transparent;
-    border-top:  50vh solid rgba(156, 156, 156, 0.342);
-    box-shadow: -10px -10px 15px red;
+    border-top:  50vh solid rgba(20, 55, 255, 0.291);
+    box-shadow: -10px -10px 10px rgba(152, 0, 127, 0.62);
     position: absolute;
 }
 .container1{
     margin-top: 5vh;
     margin-left: 3%;
     position: absolute;
-    border:2px solid red;
+    border:2px solid rgba(255, 255, 255, 0.616);
     width: 90%;
     height: auto;
-    background: rgba(221, 221, 221, 0.342);
+    background: rgba(221, 221, 221, 0.753);
     border-radius:0 50px 0 50px;
     display: flex;
     justify-content: center;
@@ -136,9 +137,9 @@ body{
     margin-left: 8%;
 }
 .clickhere a{
-    border:2px solid red;
+    border:2px solid rgba(152, 186, 255, 0.842);
     border-radius: 30px;
-    background-color: blue;
+    background: rgba(71, 120, 219, 0.723);
     padding: 1% 1%;
     width: 100%;
     display: flex;
@@ -147,7 +148,14 @@ body{
     flex-direction: column;
     gap: 2%;
     text-decoration: none;
-    color:rgb(255, 108, 108);
+    color:rgba(11, 28, 62, 0.842);
+    transition: .6s;
+}
+.clickhere a:hover{
+    border:2px solid rgba(0, 21, 64, 0.842);
+    background: rgba(0, 9, 26, 0.894);
+    color:rgba(136, 151, 181, 0.842);
+
 }
 .clickhere a i{
     font-size: 1.9rem;
@@ -157,25 +165,27 @@ body{
     text-align: center;
 }
 .container2{
-    background: rgba(221, 221, 221, 0.342);
+    background: rgba(221, 221, 221, 0.264);
     position: absolute;
     width: 90%;
     height: auto;
     margin-left: 3%;
-    border:2px solid red;
-    margin-top: 90vh;
+    border:2px solid rgba(98, 0, 155, 0.404);
+    margin-top: 50vh;
     border-radius:50px 0 50px 0;
 }
 
 table {
+    font-family: 'Bionic Comic Bold', sans-serif;
     margin-top: 3vh;
     margin-left: 2vh;
     margin-bottom: 3vh;
     width: 96%;
     border-collapse: collapse;
+    color:rgb(197, 230, 165);
 }
 th, td {
-    border: 2px solid #000000;
+    border: 2px solid #24001d56;
     padding: 2%;
     text-align: left;
 }
@@ -190,11 +200,16 @@ tr{
     transition: .6s;
 }
 tr:nth-child(even) {
-    background-color: #8457ec4f;
+    background-color: #5836a9a7;
     transition: .4s;
 }
+tr:nth-child(even):hover{
+    background-color: #360555d1;
+    color:rgb(188, 202, 162);
+}
 tr:hover {
-    background-color: #dddddd65;
+    background-color: #dce5cc65;
+    color:rgb(30, 0, 57);
 }
 #Bigcontenedor{
     border:2px solid red;
