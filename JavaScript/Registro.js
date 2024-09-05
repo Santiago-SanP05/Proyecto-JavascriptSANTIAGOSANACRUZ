@@ -117,13 +117,29 @@ function inputdetodo() {
             default:
                 price = 0;
         }
+        const ahora = new Date();
+
+        const horas = ahora.getHours();
+        const minutos = ahora.getMinutes();
+        const segundos = ahora.getSeconds();
+
+        const horaFormateada = horas.toString().padStart(2, '0');
+        const minutoFormateado = minutos.toString().padStart(2, '0');
+        const segundoFormateado = segundos.toString().padStart(2, '0');
+
+        let hora = `${horaFormateada}:${minutoFormateado}:${segundoFormateado}`
+
+        console.log(hora);
+        
         const newVehicle = {
             plate: plateInputEntrance.value,
             model: modelInputEntrance.value,
             slot: slotInputEntrance.value,
+            entraceHour: hora,
             exit_hour: "",
             price:price,
             type:vehicleType,
+            totalM:0,
             total_cost: 0,
         }
         listaVehiculos.push(newVehicle);
